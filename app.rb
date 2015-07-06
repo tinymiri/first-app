@@ -5,5 +5,23 @@ get '/hi' do
 end
 
 get '/' do
-  "<html><body><h1>Homepage</h1></body></html>"
+  "homepage"
+end
+
+
+get '/variables' do
+  
+  name = "miri"
+  flower = "peony"
+  season = "spring"
+  "#{ name } favorite flower is #{ flower } in the #{season}"
+end
+
+get '/lists' do
+  names = ["miri", "luc", "lilah", "jordan", "panfila"]
+  output = ""
+  names.each do |name|
+    output = output + name
+  end
+  output
 end
