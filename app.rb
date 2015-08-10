@@ -1,5 +1,6 @@
 require 'sinatra'
 
+puts "RUNNING ON http://localhost:4567/"
 get '/hi' do
   "Hello World!" + rand().to_s
 end
@@ -24,4 +25,17 @@ get '/lists' do
     output = output + name
   end
   output
+end
+
+get '/adder' do
+
+  numbaz = [1,2,3,4,5,6]
+  output = ""
+  numbaz.each do |num|
+    if num != 3
+      output = output + num.to_s
+    end
+  end 
+  output
+  # numbaz.to_s
 end
