@@ -32,7 +32,9 @@ get '/adder' do
   numbaz = [1,2,3,4,5,6]
   output = ""
   numbaz.each do |num|
-    output = output + num.to_s
+    if num != 3
+      output = output + num.to_s
+    end
   end 
   output
   # numbaz.to_s

@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'lists'
 
 puts "RUNNING ON http://localhost:4567/"
 get '/hi' do
